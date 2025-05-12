@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  height: 100px;
+  font-size: 18px;
+
+  /* padding: 0 560px; */
+  color: black;
+}
+
+.container img {
+  width: 220px;
+}
+
+.links_container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.links_container a {
+  color: black;
+}
+
+.button button {
+  display: inline-block;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  padding: 13px 70px;
+  background-color: #516cf1;
+  color: white;
+  border-radius: 3px;
+}
