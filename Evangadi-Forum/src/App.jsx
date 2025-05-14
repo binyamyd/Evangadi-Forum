@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "./Component/Layout/Layout";
-import Home from "./Pages/Home/Home";
 import "../src/App.css";
+import Login from "../src/Pages/Login/Login";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Layout>
-        <Home />
+        <Login />
       </Layout>
     </div>
   );
