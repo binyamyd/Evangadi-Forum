@@ -4,6 +4,7 @@ import Login from "./src/Pages/Login/Login";
 import Signup from "../Evangadi-Forum/src/Pages/Signup/Signup";
 import Home from "../Evangadi-Forum/src/Pages/Home/Home";
 import Question_Answer from "./src/Pages/Question_Answer/Question_Answer";
+import AskQuestion from "./src/Pages/AskQuestion/AskQuestion";
 
 function Routing() {
   return (
@@ -14,6 +15,7 @@ function Routing() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Question_Answer" element={<Question_Answer />} />
+          <Route path="/AskQuestion" element={<AskQuestion />} />
         </Routes>
       </Router>
     </div>
