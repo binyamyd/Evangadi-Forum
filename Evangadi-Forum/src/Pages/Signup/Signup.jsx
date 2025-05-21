@@ -1,25 +1,29 @@
 import React, { useState } from "react";
-
+import classes from "../Signup/Signup.module.css";
 import Layout from "../../Component/Layout/Layout";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import classes from "../Login/Login.module.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
+    console.log(firstName);
+    console.log(lastName);
+    console.log(userName);
     console.log(password);
-
     try {
-      if (!email || !password) {
+      if (!email || !firstName || !lastName || !userName || !password) {
         alert("Please fill out the form");
       } else {
-        alert("Login successful!");
-        navigate("/signUp");
+        alert("signUp successful");
+        navigate("/");
       }
     } catch (error) {
       alert("Something went wrong! Please try again.");
@@ -30,29 +34,55 @@ function Login() {
     <Layout>
       <div className={classes.container_login}>
         <div className={classes.form_container}>
-          <h2>Login to your account</h2>
+          <h2>Join the network</h2>
           <p>
-            Don't have an account?<Link to="/signUp">create a new account</Link>
+            Already have an account?<Link to="/"> Sign in</Link>
           </p>
-          <form onSubmit={handleSubmit} className={classes.styled_form}>
+          <form onSubmit={handleSubmit} className={classes.input_style}>
             <input
               type="Email"
               onChange={(e) => setEmail(e.target.value)}
-              value={email}
               className={classes.box}
-              placeholder="Your Email"
+              placeholder="Email"
+            />
+
+            <div className={classes.names_container}>
+              <input
+                type="User Name"
+                onChange={(e) => setFirstName(e.target.value)}
+                className={classes.box}
+                placeholder="First Name"
+              />
+              <input
+                type="User Name"
+                onChange={(e) => setLastName(e.target.value)}
+                className={classes.box}
+                placeholder="Last Name"
+              />
+            </div>
+            <input
+              type="User Name"
+              onChange={(e) => setUserName(e.target.value)}
+              className={classes.box}
+              placeholder="User Name"
             />
             <input
               type="Password"
               onChange={(e) => setPassword(e.target.value)}
-              value={password}
               className={classes.box}
-              placeholder="Your Password"
+              placeholder="Password"
             />
-            <input type="submit" value="Submit" className={classes.submit} />
+            <input
+              type="submit"
+              value="Agree And Join"
+              className={classes.signin_submit}
+            />
           </form>
-
-          <Link to="/signUp">create an account?</Link>
+          <p>
+            I agree to the <a href="">Privacy policy</a> and{" "}
+            <a href="">terms of service</a>
+          </p>
+          <Link to="/">Already have an account?</Link>
         </div>
         <div className={classes.info_container}>
           <a href="">About</a>

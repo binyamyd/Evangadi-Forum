@@ -67,6 +67,10 @@ body {
   margin-top: 10px;
 }
 
+.submit:hover {
+  background-color: #be6404;
+}
+
 .info_container {
   display: flex;
   flex-direction: column;
@@ -92,4 +96,8 @@ body {
   border-radius: 0.2rem;
   color: white;
   margin-left: 10px;
+}
+
+.info_button:hover {
+  background-color: #be6404;
 }

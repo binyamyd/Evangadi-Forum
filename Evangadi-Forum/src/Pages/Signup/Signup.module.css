@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif; /* Added for consistency */
+}
+
+.container_login {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile by default */
+  gap: 30px;
+  margin: 20px auto;
+  max-width: 1200px; /* Changed from fixed width */
+  width: 95%; /* Takes 95% of parent width */
+  padding: 20px 0; /* Added some vertical padding */
+}
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; /* Full width on mobile */
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 15px 15px 25px -8px rgb(189, 186, 186);
+  padding: 30px 0; /* Added vertical padding */
+}
+
+.form_container p {
+  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center; /* Center align text */
+}
+
+.form_container a {
+  color: #fe8302;
+  text-decoration: underline;
+}
+
+.input_style {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.names_container {
+  display: flex;
+  width: 85%;
+  gap: 7px;
+  flex-direction: column; /* Stack name fields vertically on mobile */
+}
+
+.box {
+  width: 85%;
+  height: 50px;
+  border: 0.1rem solid gainsboro;
+  border-radius: 0.3rem;
+  padding-left: 10px;
+  font-size: 16px; /* Added for better mobile readability */
+}
+
+.signin_submit {
+  font-size: 16px;
+  width: 85%;
+  height: 50px;
+  color: white;
+  background-color: #516cf1;
+  border: transparent;
+  text-align: center;
+  border-radius: 0.3rem;
+  margin-bottom: 15px;
+  cursor: pointer; /* Better UX */
+  transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.signin_submit:hover {
+  background-color: #fe8302;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width on mobile */
+  background-color: #f5f5f5;
+  justify-content: center;
+  padding: 30px 20px; /* Added padding */
+  text-align: center; /* Center align text */
+}
+
+.info_container a {
+  color: #fe8302;
+  padding-bottom: 20px;
+  display: inline-block; /* Better spacing */
+}
+
+.info_container h1 {
+  font-size: clamp(28px, 3vw, 35px); /* Responsive font size */
+  margin-bottom: 10px;
+}
+
+.info_container p {
+  line-height: 1.4;
+  font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size */
+}
+
+.info_button {
+  width: 60%; /* Wider on mobile */
+  max-width: 200px; /* But not too wide */
+  padding: 12px 0; /* Slightly taller */
+  margin: 30px auto 0; /* Centered with top margin */
+  background-color: #fe8302;
+  border: transparent;
+  border-radius: 0.2rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover transition */
+  font-size: 16px;
+}
+
+.info_button:hover {
+  background-color: #be6404;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and Desktop Layout */
+@media (min-width: 768px) {
+  .container_login {
+    flex-direction: row; /* Side by side on larger screens */
+    height: auto; /* Remove fixed height */
+    margin: 40px auto;
+  }
+
+  .form_container {
+    width: 50%; /* Half width on larger screens */
+  }
+
+  .info_container {
+    width: 50%; /* Half width on larger screens */
+    text-align: left; /* Left align on desktop */
+    padding: 0 40px; /* More horizontal padding */
+  }
+
+  .names_container {
+    flex-direction: row; /* Name fields side by side */
+  }
+
+  .info_button {
+    margin-left: 10px; /* Original positioning */
+    margin-right: 0;
+    width: 30%;
+  }
+}
+
+/* Large Desktop Optimization */
+@media (min-width: 1200px) {
+  .container_login {
+    width: 1200px; /* Fixed max width on very large screens */
+  }
+}

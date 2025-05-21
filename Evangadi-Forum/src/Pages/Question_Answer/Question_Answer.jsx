@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../../Component/Layout/Layout";
 
-function Home() {
+function Question_Answer() {
   return (
     <Layout>
-      <div>This is home page</div>
+      <div>This is a Question and answer page</div>;
     </Layout>
   );
 }
 
-export default Home;
+export default Question_Answer;

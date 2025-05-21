@@ -1,16 +1,9 @@
 import React from "react";
-import Layout from "./Component/Layout/Layout";
 import "../src/App.css";
-import Login from "../src/Pages/Login/Login";
+import Routing from "../Router";
 
 function App() {
-  return (
-    <div>
-      <Layout>
-        <Login />
-      </Layout>
-    </div>
-  );
+  return <Routing />;
 }
 
 export default App;
