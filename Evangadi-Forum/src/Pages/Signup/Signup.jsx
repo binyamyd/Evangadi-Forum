@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import classes from "../Signup/Signup.module.css";
 import Layout from "../../Component/Layout/Layout";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Component/Auth/auth";
 
 function Login() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function Login() {
   const [lastName, setLastName] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const auth = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +25,8 @@ function Login() {
         alert("Please fill out the form");
       } else {
         alert("signUp successful");
-        navigate("/");
+        auth.setEmail();
+        navigate("/Login");
       }
     } catch (error) {
       alert("Something went wrong! Please try again.");
@@ -36,7 +39,7 @@ function Login() {
         <div className={classes.form_container}>
           <h2>Join the network</h2>
           <p>
-            Already have an account?<Link to="/"> Sign in</Link>
+            Already have an account?<Link to="/Login"> Sign in</Link>
           </p>
           <form onSubmit={handleSubmit} className={classes.input_style}>
             <input
@@ -82,7 +85,7 @@ function Login() {
             I agree to the <a href="">Privacy policy</a> and{" "}
             <a href="">terms of service</a>
           </p>
-          <Link to="/">Already have an account?</Link>
+          <Link to="/Login">Already have an account?</Link>
         </div>
         <div className={classes.info_container}>
           <a href="">About</a>

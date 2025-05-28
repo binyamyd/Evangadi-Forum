@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Layout from "../../Component/Layout/Layout";
 import classes from "../AskQuestion/AskQuestion.module.css";
+import { useAuth } from "../../Component/Auth/auth";
 
 function AskQuestion() {
   const [title, setTitle] = useState("");
   const [question, setQuestion] = useState("");
+  const auth = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +28,7 @@ function AskQuestion() {
   return (
     <Layout showFooter={false}>
       <div className={classes.container}>
+        <h4>Welocme: {auth.email}</h4>
         <h2>Steps to write a good question</h2>
         <ul>
           <li>Summerize your problem in a one-line title.</li>
