@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../Footer/Footer.module.css";
 import logo from "../../assets/Logo_White.png";
-import { LuFacebook } from "react-icons/lu";
+import { LuFacebook } from "lucide-react";
 import { FaInstagram } from "react-icons/fa6";
 import { RiYoutubeLine } from "react-icons/ri";
 
