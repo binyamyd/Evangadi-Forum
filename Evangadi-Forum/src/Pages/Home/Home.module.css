@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.inner_container {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #516cf1;
+  font-size: 15px;
+  color: white;
+  padding: 10px 50px;
+  border-style: none;
+}
+
+.button:hover {
+  background-color: blue;
+}
+.questions_container {
+  margin-top: 50px;
+  font-size: 30px;
+  /* border: 1px solid black; */
+  height: 100vh;
+}
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  height: 100%;
+}

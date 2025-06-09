@@ -32,10 +32,10 @@ function Header() {
         </Link>
       </div>
       <div className={classes.links_container}>
-        <Link className={classes.underline} to="/Home">
+        <Link className={classes.underline} to="/">
           Home
         </Link>
-        <Link className={classes.underline} to="/Home">
+        <Link className={classes.underline} to="/">
           How it works
         </Link>
         <div className={classes.button}>{getAuthButton()}</div>

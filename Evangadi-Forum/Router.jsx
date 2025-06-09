@@ -16,13 +16,21 @@ function Routing() {
           <Routes>
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
-            <Route path="/Home" element={<Home />} />
+
+            <Route
+              path="/AskQuestion"
+              element={
+                <RequiredAuth>
+                  <AskQuestion />
+                </RequiredAuth>
+              }
+            />
             <Route path="/Question_Answer" element={<Question_Answer />} />
             <Route
               path="/"
               element={
                 <RequiredAuth>
-                  <AskQuestion />
+                  <Home />
                 </RequiredAuth>
               }
             />

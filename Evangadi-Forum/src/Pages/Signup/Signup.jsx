@@ -25,7 +25,7 @@ function Login() {
         alert("Please fill out the form");
       } else {
         alert("signUp successful");
-        auth.setEmail();
+
         navigate("/Login");
       }
     } catch (error) {

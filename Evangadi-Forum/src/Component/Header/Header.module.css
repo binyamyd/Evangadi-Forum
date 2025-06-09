@@ -13,7 +13,7 @@
   align-items: center;
   min-height: 100px;
   font-size: 18px;
-  padding: 0 20rem;
+  padding: 0 30rem;
   color: black;
   flex-wrap: wrap;
 }
@@ -48,7 +48,7 @@
   border-radius: 3px;
 }
 .button button:hover {
-  background-color: #fe8302;
+  background-color: blue;
 }
 
 /* Media Queries for Responsiveness */
