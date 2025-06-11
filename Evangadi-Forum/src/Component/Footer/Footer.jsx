@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../Footer/Footer.module.css";
 import logo from "../../assets/Logo_White.png";
-import { LuFacebook } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { RiYoutubeLine } from "react-icons/ri";
 
@@ -13,7 +13,7 @@ function Footer() {
           <img src={logo} alt="" />
           <div className={classes.social_links}>
             <a href="https://facebook.com">
-              <LuFacebook size={25} color="white" />
+              <FaFacebookF size={25} color="white" />
             </a>
             <a href="https://instagram.com">
               <FaInstagram size={25} color="white" />
