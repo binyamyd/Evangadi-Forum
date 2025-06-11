@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "../Footer/Footer.module.css";
 import logo from "../../assets/Logo_White.png";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { RiYoutubeLine } from "react-icons/ri";
 
 function Footer() {
